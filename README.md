@@ -5,20 +5,31 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version: 3.0.0
 
-* System dependencies
+* Rails version: 6.0.6
 
-* Configuration
+* DB: Sqlite
 
-* Database creation
+* Run all rspecs by: bundle exec rspec
 
-* Database initialization
+* Sample for testing endpoints
+path: /v1/courses (POST/GET)
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+POST Body:
+{
+  "course": {
+      "name": " Maths",
+      "description": "Mathematics",
+      "rating": "3",
+      "tutors_attributes": [{
+          "first_name": "Test1",
+          "email": "test@test.net"
+      },
+      {
+          "first_name": "Lodfu",
+          "email": "test123@test.net"
+      }
+    ]
+  }
+}
